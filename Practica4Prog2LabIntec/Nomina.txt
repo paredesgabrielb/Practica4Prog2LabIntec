@@ -1,0 +1,4 @@
+﻿001|Joel|110.5
+002|Gabriel Paredes|150.0
+003|Peralta Jose|200.0
+004|Brayan Mota|75.5

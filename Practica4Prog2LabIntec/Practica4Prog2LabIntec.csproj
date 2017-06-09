@@ -47,12 +47,14 @@
     <Compile Include="Ponche.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resultado.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Muestras.txt" />
+    <Content Include="Nomina.txt" />
+    <Content Include="Ponches.txt" />
     <Content Include="Resultado.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

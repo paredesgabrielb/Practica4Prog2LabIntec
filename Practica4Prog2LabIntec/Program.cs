@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using static System.Configuration.ConfigurationSettings;
 
 namespace Practica4Prog2LabIntec
 {
@@ -32,31 +33,15 @@ namespace Practica4Prog2LabIntec
         //Usando listas y clase
         static void Main(string[] args)
         {
-            string sourcePath = @"../../Muestras.txt";
-            string outPath = @"../../Resultado.txt";
 
-            var nomina = new List<Empleado>();
-            if (File.Exists(sourcePath))
+            string outPath = AppSettings["outPath"];
+
+            new Ponche();
+            new Empleado();
+
+            if (File.Exists(outPath))
             {
-                string text = File.ReadAllText(sourcePath);
-                foreach (var item in text.Split(new[] {"\n\n"}, StringSplitOptions.None))
-                {
-                    // Empleado newEstudio = Empleado.ParseStringToEstudio(item.Replace(item.Split('\n')[0]+"\n",""));
-                    // newEstudio.Nombre = item.Split('\n')[0];
-                    // estudios.Add(newEstudio);
-                }
-
-                if (File.Exists(outPath))
-                {
-                    foreach (var item in nomina)
-                    {
-                       // item.PrintInFile(outPath);     
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("El Archivo Resultado.txt no existe. Favor Verificar");
-                }
+                    
             }
             else
             {
@@ -64,5 +49,7 @@ namespace Practica4Prog2LabIntec
             }
             Console.Read();
         }
+
+
     }
 }
