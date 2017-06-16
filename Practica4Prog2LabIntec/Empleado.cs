@@ -10,10 +10,7 @@ namespace Practica4Prog2LabIntec
 {
     class Empleado
     {
-        public Empleado()
-        {
-            Empleados = GetNomina();
-        }
+
         public int IdEmpleado { get; set; }
         public string Nombre { get; set; }
         public double Salario { get; set; }
@@ -23,7 +20,7 @@ namespace Practica4Prog2LabIntec
             return $"{IdEmpleado}|{Nombre}|{Salario}";
         }
 
-        public static  List<Empleado> Empleados { get; set; }
+        public List<Empleado> Empleados => GetNomina();
         private List<Empleado> GetNomina()
         {
             string nominaPath = AppSettings["nominaPath"];
